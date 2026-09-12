@@ -1,7 +1,7 @@
 import { artikelData } from "../../../data/artikelData";
 import ArtikelCart from "../../ArtikelCart";
 import Button from "../../ui/Button";
-import layananBg from "../../../assets/image/layananBg.png"
+import layananBg from "../../../assets/image/LayananBg.png"
 
 
 const Artikel = () => {

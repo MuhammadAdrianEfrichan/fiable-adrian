@@ -2,7 +2,7 @@ import layanan from "../../../assets/icons/layanan.svg"
 import litigasi from "../../../assets/icons/litigasi.svg"
 import general from "../../../assets/icons/general.svg"
 import arrow from "../../../assets/icons/arrow.svg"
-import layananBg from "../../../assets/image/layananBg.png"
+import layananBg from "../../../assets/image/LayananBg.png"
 const Layanan = ()=>{
     return <section className="bg-background px-14.75 py-32.75 h-220"
     style={{ backgroundImage: `url(${layananBg})` }}>
