@@ -1,4 +1,3 @@
-import layanan from "../../assets/icons/layanan.svg"
 import Artikel from "../../components/sections/Artikel"
 import Footer from "../../components/sections/Footer"
 import Galerry from "../../components/sections/Galerry"

@@ -1,4 +1,3 @@
-import ArtikelCart from "../../components/ArtikelCart"
 import Head from "../../components/Head"
 import Footer from "../../components/sections/Footer"
 import Navbar from "../../components/sections/Navbar"

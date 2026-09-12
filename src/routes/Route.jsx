@@ -5,20 +5,9 @@ import Tentang from "../pages/Tentang"
 import Partner from "../pages/Partner"
 import Consultan from "../pages/Consultan"
 import Lawyer from "../pages/Lawyer"
-import Footer from "../components/sections/Footer"
-import Head from "../components/Head"
-import Navbar from "../components/sections/Navbar"
 import Kontak from "../pages/Kontak"
 import ArtikelPag from "../pages/ArtikelPag"
 import Konsul from "../pages/Konsul/Konsul"
-
-const PlaceholderPage = ({ title }) => (
-    <>
-        <Navbar />
-        <Head>{title}</Head>
-        <Footer />
-    </>
-)
 
 const AppRoutes = () => (
     <Routes>
