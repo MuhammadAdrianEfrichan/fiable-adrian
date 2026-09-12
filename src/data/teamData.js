@@ -3,7 +3,7 @@ import partnerDua from "../assets/image/timKami/PartnerProfile/partnerDua.png"
 import consultanSatu from "../assets/image/timKami/consultan/consultanSatu.png"
 import consultanDua from "../assets/image/timKami/consultan/consultanDua.png"
 import lawyerSatu from "../assets/image/timKami/lawyer/lawyerSatu.png"
-import lawyerDua from "../assets/image/timKami/lawyer/lawyerDua.png"
+import lawyerDua from "../assets/image/timKami/lawyer/lawyerdua.png"
 
 
 export const teamCategories = [
