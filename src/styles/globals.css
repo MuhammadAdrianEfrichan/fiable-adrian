@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Marcellus&display=swap');
+@import "tailwindcss";
+
+@theme{
+
+    /* component font */
+    --font-archivo : "Archivo";
+    --font-heading : "Marcellus";
+    --font-artikel : "Inter";
+
+    /* color */
+    --color-oren : #F9A000;
+    --color-biru :#174489;
+    --color-paragraf :#667C99;
+    --color-footer : #0A2F5B;
+    --color-btm-footer :#033F89;
+    --color-heading :#001025;
+    --color-background :#D9D9D94D;
+
+
+    --default-font-family: var(--font-archivo);
+}
+
