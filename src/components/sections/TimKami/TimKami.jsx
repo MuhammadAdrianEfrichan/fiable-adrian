@@ -22,11 +22,11 @@ export default function TimKami() {
       style={{ backgroundImage: `url(${timKamiHero})` }}
     >
 
-      <div className="flex items-center flex-col justify-center gap-10 mb-16">
+      <div className="mb-10 flex flex-col items-center justify-center gap-8 px-5 sm:mb-16 sm:px-10 lg:gap-10">
         <img src={timKami} alt="" />
       
 
-      <div className="mx-auto px-4">
+      <div className="mx-auto w-full max-w-376.75 px-0 sm:px-4">
         <AccordionItem
           title="Partner Profile"
           isOpen={openId === "partner"}
@@ -42,7 +42,7 @@ export default function TimKami() {
       </div>
 
 
-      <div className="mx-auto px-4">
+      <div className="mx-auto w-full max-w-376.75 px-0 sm:px-4">
         <AccordionItem
           title="Legal Consultant Profile"
           isOpen={openId === "legalConsultan"}
@@ -58,14 +58,14 @@ export default function TimKami() {
       </div>
 
 
-      <div className="mx-auto">
+      <div className="mx-auto w-full max-w-376.75">
       <AccordionItem
   title="Lawyer Profile"
   isOpen={openId === "lawyer"}
   onToggle={() => handleToggle("lawyer")}
 >
   <div className="py-5"></div>
-  <div className="flex flex-wrap gap-x-10 gap-y-10">
+  <div className="grid grid-cols-1 gap-x-10 gap-y-10 sm:grid-cols-2">
     {lawyerCategory.members.map((member) => (
       <LawyerCard key={member.id} member={member} />
     ))}

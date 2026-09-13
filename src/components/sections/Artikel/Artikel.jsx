@@ -6,16 +6,16 @@ import layananBg from "../../../assets/image/LayananBg.png"
 
 const Artikel = () => {
   return (
-    <section className="bg-background px-14.75 py-32.75"
+    <section className="bg-background bg-cover px-5 py-16 sm:px-10 sm:py-24 lg:px-14.75 lg:py-32.75"
      style={{ backgroundImage: `url(${layananBg})`}}>
-      <div className="flex items-center justify-center gap-3 mb-16">
-        <span className="w-2 h-2 bg-oren rotate-45" />
-        <span className="w-25 h-px bg-oren" />
-        <h1 className="text-heading text-[55px] tracking-widest uppercase font-heading">
+      <div className="mb-10 flex items-center justify-center gap-3 sm:mb-16">
+        <span className="h-2 w-2 rotate-45 bg-oren" />
+        <span className="hidden h-px w-25 bg-oren sm:block" />
+        <h1 className="text-center font-heading text-4xl uppercase tracking-widest text-heading sm:text-[55px]">
           Artikel
         </h1>
-        <span className="w-25 h-px bg-oren" />
-        <span className="w-2 h-2 bg-oren rotate-45" />
+        <span className="hidden h-px w-25 bg-oren sm:block" />
+        <span className="h-2 w-2 rotate-45 bg-oren" />
       </div>
       <div className="flex flex-wrap gap-8 justify-center">
         {artikelData.map((item) => {

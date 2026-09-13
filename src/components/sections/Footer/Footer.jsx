@@ -6,9 +6,9 @@ import igFooter from "../../../assets/icons/igFooter.svg"
 const Footer =()=>{
     return(
         <footer className="footer bg-footer text-white font-archivo">
-            <div className="mx-auto grid h-98.75 w-[calc(100%-180px)] grid-cols-[minmax(0,1fr)_200px_404px] items-center gap-x-12 max-[700px]:h-auto max-[700px]:w-[min(calc(100%-40px),420px)] max-[700px]:grid-cols-2 max-[700px]:gap-x-7 max-[700px]:gap-y-8.5 max-[700px]:py-9.5">
-                <div className="self-center max-[700px]:col-span-2">
-                    <img className="block w-75.75 max-[700px]:w-full max-[700px]:max-w-75.75" src={fiableFooter} alt="Fiable Law Office" />
+            <div className="mx-auto grid h-auto w-[calc(100%-40px)] max-w-7xl grid-cols-1 items-center gap-8 py-10 sm:grid-cols-2 lg:h-98.75 lg:w-[calc(100%-180px)] lg:grid-cols-[minmax(0,1fr)_200px_404px] lg:gap-x-12 lg:py-0">
+                <div className="self-center sm:col-span-2 lg:col-span-1">
+                    <img className="block w-full max-w-75.75" src={fiableFooter} alt="Fiable Law Office" />
                     <div className="mt-9.5 flex items-center gap-4" aria-label="Media sosial Fiable Law Office">
                         <a className="inline-flex" href="#" aria-label="Instagram Fiable Law Office">
                             <img className="h-9 w-9" src={igFooter} alt="" />
@@ -29,15 +29,15 @@ const Footer =()=>{
                     <a href="#kontak">Kontak</a>
                 </nav>
 
-                <address className="flex flex-col self-center" id="kontak">
+                <address className="flex flex-col self-center text-sm sm:text-base" id="kontak">
                     <h2>INFO KANTOR</h2>
                     <p>Jalan Padang Pasir IX No. 55,<br />Kel. Padang Pasir, Kec. Padang<br />Barat, Kota Padang,<br />Provinsi Sumatera Barat</p>
                     <a href="mailto:info@fiablelawyers.com">info@fiablelawyers.com</a>
                     <a href="tel:085375917227">085375917227</a>
                 </address>
             </div>
-            <div className="flex h-19.25 items-center justify-center bg-btm-footer px-5 max-[700px]:min-h-19.25 max-[700px]:py-5">
-                <p>&copy; 2024 Fiable Law Office | Powered by PT Metro Indonesian Software</p>
+            <div className="flex min-h-19.25 items-center justify-center bg-btm-footer px-5 py-5 text-center">
+                <p className="text-sm">&copy; 2024 Fiable Law Office | Powered by PT Metro Indonesian Software</p>
             </div>
         </footer>
     )

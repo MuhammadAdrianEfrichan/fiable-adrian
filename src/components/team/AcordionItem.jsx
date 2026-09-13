@@ -1,13 +1,13 @@
 export default function AccordionItem({ title, isOpen, onToggle, children }) {
   return (
-    <div className="bg-white rounded-xl shadow-lg overflow-hidden w-376.75">
+    <div className="w-full max-w-376.75 overflow-hidden rounded-xl bg-white shadow-lg">
       <button
         onClick={onToggle}
-        className="w-full flex items-center justify-between p-6"
+        className="flex w-full items-center justify-between gap-4 p-4 text-left sm:p-6"
       >
         <div className="flex items-center gap-4">
           <span className="w-5 h-5 bg-black rotate-45 shrink-0" />
-          <span className="font-bold uppercase text-[35px]">{title}</span>
+          <span className="font-bold uppercase text-xl sm:text-[35px]">{title}</span>
         </div>
         <svg
         className={`w-10 h-10 cursor-pointer transition-transform duration-300 ${

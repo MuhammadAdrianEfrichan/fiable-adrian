@@ -14,7 +14,7 @@ const Partner = ()=>{
 			<Navbar />
 			<Head>Partner Profile</Head>
                 <div className="py-5"></div>
-                <div className="px-14.75">
+                <div className="mx-auto max-w-7xl px-5 sm:px-10 lg:px-14.75">
                 {
                 partnerCategory.member.map((member) => (
                 <MemberCard key={member.id} member={member}/>

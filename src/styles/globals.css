@@ -23,3 +23,12 @@
     --default-font-family: var(--font-archivo);
 }
 
+html {
+    overflow-x: hidden;
+}
+
+body {
+    min-width: 320px;
+    overflow-x: hidden;
+}
+

@@ -12,7 +12,7 @@ const Lawyer = () => {
             <Navbar />
             <Head>Lawyer Profile</Head>
             <div className="py-5"></div>
-                <div className="flex flex-wrap gap-x-10 gap-y-10 px-14.75"  >
+                <div className="mx-auto flex max-w-7xl flex-wrap justify-center gap-x-10 gap-y-10 px-5 sm:px-10 lg:px-14.75"  >
                     {lawyerCategory.members.map((member) => (
                     <LawyerCard key={member.id} member={member} />
                     ))}

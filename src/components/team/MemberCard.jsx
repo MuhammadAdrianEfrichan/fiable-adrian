@@ -3,24 +3,24 @@ import linkind from "../../assets/icons/linkind.svg"
 
 export default function MemberCard({ member }) {
     return (
-        <div className="flex gap-10"  key={member.id}>
+        <div className="flex flex-col gap-6 sm:gap-10 lg:flex-row" key={member.id}>
         <img
             src={member.photo}
             alt={member.name}
-            className="w-93 h-116.5 object-cover shrink-0"
+            className="h-auto w-full max-w-93 object-cover sm:w-2/3 lg:shrink-0"
         />
         <div className="flex-1">
-            <h3 className="font-bold text-heading text-[25px]">
+            <h3 className="text-xl font-bold text-heading sm:text-[25px]">
             {member.name} {member.role && `(${member.role})`}
             </h3>
-            <p className="text-[23px]">
+            <p className="text-lg sm:text-[23px]">
             <span className="text-paragraf">Spesialisasi: {member.specialty}</span>
             </p>
-            <div className="h-119.25 w-215.25">
-            <p className="text-[23px] text-heading mt-2 text-justify leading-relaxed  font-normal">
+            <div className="h-auto w-full">
+            <p className="mt-2 text-justify text-base font-normal leading-relaxed text-heading sm:text-[23px]">
             {member.bio}
             </p>
-            <p className="text-[23px] text-heading mt-2 text-justify leading-relaxed  font-normal">
+            <p className="mt-2 text-justify text-base font-normal leading-relaxed text-heading sm:text-[23px]">
             {member.bioDua}
             </p>
             <div className="flex items-center gap-3 mt-10">
@@ -38,7 +38,7 @@ export default function MemberCard({ member }) {
             </a>
             
             <a href={member.portfolioUrl}
-                className="bg-oren w-70 text-[18px] hover:bg-orange-600 hover:text-white text-biru text-xs font-bold uppercase px-4 py-2 transition-colors"
+                className="bg-oren w-full max-w-70 px-4 py-2 text-xs font-bold uppercase text-biru transition-colors hover:bg-orange-600 hover:text-white sm:text-[18px]"
             >
                 Download Portfolio
             </a>

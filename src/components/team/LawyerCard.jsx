@@ -3,17 +3,17 @@ import linkind from "../../assets/icons/linkind.svg"
 
 const LawyerCard = ({ member }) => {
   return (
-    <div className="flex flex-col w-100.75 justify-baseline">
+    <div className="flex w-full max-w-100.75 flex-col justify-baseline">
       <img
         src={member.photo}
         alt={member.name}
-        className=" h-116.5 object-cover shrink-0"
+        className="h-auto w-full object-cover"
       />
       <div className="mt-4">
-        <h3 className="font-bold text-heading text-[25px]">
+        <h3 className="text-xl font-bold text-heading sm:text-[25px]">
           {member.name}
         </h3>
-        <p className="text-[23px]">
+        <p className="text-lg sm:text-[23px]">
           <span className="text-paragraf">Spesialisasi: {member.specialty}</span>
         </p>
         <div className="flex items-center gap-3 mt-10">
@@ -31,7 +31,7 @@ const LawyerCard = ({ member }) => {
           </a>
           
            <a href={member.portfolioUrl}
-            className="bg-oren w-70 text-[18px] hover:bg-orange-600 hover:text-white text-biru text-xs font-bold uppercase px-4 py-2 transition-colors"
+            className="bg-oren w-full max-w-70 px-4 py-2 text-xs font-bold uppercase text-biru transition-colors hover:bg-orange-600 hover:text-white sm:text-[18px]"
           >
             Download Portfolio
           </a>
