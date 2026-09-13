@@ -21,7 +21,7 @@ const GalerryData = [
 
 
 const Galerry = ()=>{
-    return <section className="relative flex min-h-[32rem] flex-col items-center justify-center gap-10 bg-cover bg-center bg-no-repeat px-5 py-16 sm:px-10 sm:py-24 lg:h-161.25 lg:gap-15 lg:px-14.75 lg:py-32.75"
+    return <section className="relative flex min-h-128 flex-col items-center justify-center gap-10 bg-cover bg-center bg-no-repeat px-5 py-16 sm:px-10 sm:py-24 lg:h-161.25 lg:gap-15 lg:px-14.75 lg:py-32.75"
             style={{ backgroundImage: `url(${galeriHero})` }}>
                 <img src={galeri} alt="" className="" />
                 <div className="grid w-full max-w-7xl grid-cols-1 gap-5 sm:grid-cols-3">
