@@ -2,9 +2,12 @@ import { artikelData } from "../../../data/artikelData";
 import ArtikelCart from "../../ArtikelCart";
 import Button from "../../ui/Button";
 import layananBg from "../../../assets/image/LayananBg.png"
+import { useNavigate } from "react-router-dom"
 
 
 const Artikel = () => {
+  const navigate = useNavigate()
+
   return (
     <section className="bg-background bg-cover px-5 py-16 sm:px-10 sm:py-24 lg:px-14.75 lg:py-32.75"
      style={{ backgroundImage: `url(${layananBg})`}}>
@@ -22,7 +25,7 @@ const Artikel = () => {
         return <ArtikelCart key={item.id} item={item} />
         })}
         <div className="">
-            <Button className="uppercase text-paragraf cursor-pointer hover:text-white">selengkapnya</Button>
+            <Button onClick={() => navigate("/artikel")} className="cursor-pointer uppercase text-paragraf hover:text-white">selengkapnya</Button>
         </div>
       </div>
     </section>

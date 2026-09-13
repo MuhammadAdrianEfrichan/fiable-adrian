@@ -11,7 +11,7 @@ const Layan = ()=>{
         <>
             <Navbar />
             <Head>Layanan</Head>
-            <Layanan />
+            <Layanan isDetailPage />
             <Footer />
         </>
     )

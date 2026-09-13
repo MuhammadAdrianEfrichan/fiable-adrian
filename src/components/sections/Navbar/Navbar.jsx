@@ -9,6 +9,7 @@ const menuClass = ({ isActive }) =>
 
 const Navbar = ()=>{
     const [isMenuOpen, setIsMenuOpen] = useState(false)
+    const [isTeamMenuOpen, setIsTeamMenuOpen] = useState(false)
     const location = useLocation()
     const navigate = useNavigate()
     const isTeamActive = location.pathname.startsWith("/tim-kami")
@@ -29,18 +30,20 @@ const Navbar = ()=>{
                 <li><NavLink to="/" end className={menuClass}>Beranda</NavLink></li>
                 <li><NavLink to="/tentang-kami" className={menuClass}>Tentang Kami</NavLink></li>
                 <li><NavLink to="/layanan" className={menuClass}>Layanan</NavLink></li>
-                <li className="relative group">
+                <li className="group relative flex flex-col lg:items-center">
                     <button
                         type="button"
-                        className={`flex items-center gap-1 mt-2 transition-colors duration-200 ${isTeamActive ? "text-oren" : "text-black hover:text-oren"}`}
+                        aria-expanded={isTeamMenuOpen}
+                        onClick={() => setIsTeamMenuOpen((open) => !open)}
+                        className={`mt-2 flex items-center gap-1 transition-colors duration-200 ${isTeamActive ? "text-oren" : "text-black hover:text-oren"}`}
                     >
                         Tim Kami
                         <img src={dropdown} alt="" className="w-4 h-2" />
                     </button>
-                    <ul className="absolute z-10 left-1/2 hidden w-52 -translate-x-1/2 bg-white py-2 text-base font-normal shadow-md group-hover:block group-focus-within:block">
-                        <li><NavLink to="/tim-kami/partner-profile" className={({ isActive }) => `block px-3 py-2 hover:bg-gray-100 ${isActive ? "text-oren" : "text-black"}`}>Partner Profile</NavLink></li>
-                        <li><NavLink to="/tim-kami/legal-consultant-profile" className={({ isActive }) => `block px-3 py-2 hover:bg-gray-100 ${isActive ? "text-oren" : "text-black"}`}>Legal Consultant Profile</NavLink></li>
-                        <li><NavLink to="/tim-kami/lawyer-profile" className={({ isActive }) => `block px-3 py-2 hover:bg-gray-100 ${isActive ? "text-oren" : "text-black"}`}>Lawyer Profile</NavLink></li>
+                    <ul className={`${isTeamMenuOpen ? "flex" : "hidden"} w-full flex-col border-t border-gray-100 bg-white py-2 text-base font-normal lg:absolute lg:left-1/2 lg:top-full lg:z-10 lg:w-52 lg:-translate-x-1/2 lg:border-t-0 lg:shadow-md`}>
+                        <li><NavLink onClick={() => setIsTeamMenuOpen(false)} to="/tim-kami/partner-profile" className={({ isActive }) => `block px-3 py-2 hover:bg-gray-100 ${isActive ? "text-oren" : "text-black"}`}>Partner Profile</NavLink></li>
+                        <li><NavLink onClick={() => setIsTeamMenuOpen(false)} to="/tim-kami/legal-consultant-profile" className={({ isActive }) => `block px-3 py-2 hover:bg-gray-100 ${isActive ? "text-oren" : "text-black"}`}>Legal Consultant Profile</NavLink></li>
+                        <li><NavLink onClick={() => setIsTeamMenuOpen(false)} to="/tim-kami/lawyer-profile" className={({ isActive }) => `block px-3 py-2 hover:bg-gray-100 ${isActive ? "text-oren" : "text-black"}`}>Lawyer Profile</NavLink></li>
                     </ul>
                 </li>
                 <li><NavLink to="/artikel" className={menuClass}>Artikel</NavLink></li>
