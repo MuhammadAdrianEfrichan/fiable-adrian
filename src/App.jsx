@@ -1,9 +1,25 @@
+import { useEffect } from "react"
+import { useLocation } from "react-router-dom"
 import AppRoutes from "./routes/Route"
 
+function ScrollToTop() {
+  const { pathname } = useLocation()
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [pathname])
+
+  return null
+}
 
 
 function App() {
-  return <AppRoutes />
+  return (
+    <>
+      <ScrollToTop />
+      <AppRoutes />
+    </>
+  )
 }
 
 export default App

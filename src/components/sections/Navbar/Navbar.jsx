@@ -21,10 +21,10 @@ const Navbar = ()=>{
             <Link to="/" aria-label="Beranda">
                 <img src={logo} alt="Fiable Law Office" className="w-44 lg:w-auto" />
             </Link>
-            <button type="button" aria-label="Buka menu navigasi" aria-expanded={isMenuOpen} onClick={() => setIsMenuOpen((open) => !open)} className="flex h-11 w-11 flex-col items-center justify-center gap-1.5 border border-biru text-biru lg:hidden">
-                <span className="h-0.5 w-6 bg-current" />
-                <span className="h-0.5 w-6 bg-current" />
-                <span className="h-0.5 w-6 bg-current" />
+            <button type="button" aria-label={isMenuOpen ? "Tutup menu navigasi" : "Buka menu navigasi"} aria-expanded={isMenuOpen} onClick={() => setIsMenuOpen((open) => !open)} className="relative flex h-11 w-11 items-center justify-center border border-biru text-biru lg:hidden">
+                <span className={`absolute h-0.5 w-6 bg-current transition-all duration-300 ease-in-out ${isMenuOpen ? "rotate-45" : "-translate-y-2"}`} />
+                <span className={`absolute h-0.5 w-6 bg-current transition-all duration-200 ease-in-out ${isMenuOpen ? "opacity-0" : "opacity-100"}`} />
+                <span className={`absolute h-0.5 w-6 bg-current transition-all duration-300 ease-in-out ${isMenuOpen ? "-rotate-45" : "translate-y-2"}`} />
             </button>
             <ul className={`${isMenuOpen ? "flex" : "hidden"} absolute left-0 top-full w-full flex-col gap-5 border-t border-gray-100 bg-white px-5 py-6 text-lg font-semibold shadow-lg lg:static lg:flex lg:w-[70%] lg:flex-row lg:items-center lg:justify-around lg:border-0 lg:p-0 lg:text-[26px] lg:shadow-none`}>
                 <li><NavLink to="/" end className={menuClass}>Beranda</NavLink></li>
